@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:ignore="MissingTranslation" >
+    
+    <!-- widget strings -->
+    <string name="app_name">MoneroStatus</string>
+    <string name="widget_text">…</string>
+    <string name="refresh_toast">Updating…</string>
+    <string name="widget_title">Monero</string>
+    <string name="widget_exchange_poloniex">Poloniex</string>
+    <string name="widget_exchange_bittrex">Bittrex</string>
+    <string name="widget_exchange_bter">Bter</string>
+    <string name="widget_exchange_mintpal">Mintpal</string>
+    <string name="widget_exchange_hitbtc">Hitbtc</string>
+    <!--<string name="widget_exchange_melotic">Melotic</string>-->
+    <string name="widget_exchange_shapeshift">Shapeshift</string>
+    <!--<string name="widget_exchange_cryptsy">Cryptsy</string>-->
+    <string name="widget_exchange_cryptopia">Cryptopia</string>
+    <string name="widget_exchange_bitfinex">Bitfinex</string>
+    <string name="widget_price">Price:</string>
+    <string name="widget_volume">Total Vol.:</string>
+    <string name="hashrate"></string>
+    <string name="widget_exchange_volume">Exch. Volume:</string>
+    <string name="widget_user_coins_currency">Your Assets:</string>
+    <string name="widget_user_projection_currency">Approx. mined/24h:</string>
+    <string name="widget_market_capitalization">Market Capit.:</string>
+
+    
+    <!-- widget configuration strings -->
+    <string name="config_select_currency">Select currency:</string>
+    <string name="config_select_exchange">Select exchange:</string>
+    <string name="config_user_values_note">Note: entered values shared with app calculator, persistent</string>
+    <string name="config_user_hashrate_prompt">Enter your hashrate:</string>
+    <string name="config_user_xmr_prompt">Enter your XMR Assets:</string>
+    <string name="config_ok_button">Done</string>
+    
+    
+    <!-- main activity strings -->
+    <string name="title_activity_main">Monero Status</string>
+    
+    
+    <!-- list drawer strings -->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    
+   	<string-array name="fragments_pretty">
+        <item>Coin Info</item>
+        <item>Calculators</item>
+        <item>Market Depth</item>
+        <item>XMR Markets</item>
+        <item>Price Alarms</item>
+    </string-array>
+    
+   	<string-array name="fragment_tags">
+        <item>info_fragment</item>
+        <item>calc_fragment</item>
+        <item>graph_fragment</item>
+        <item>market_fragment</item>
+        <item>alarm_fragment</item>
+    </string-array>
+    
+   	
+    <!-- info fragment strings -->
+    <string name="main_action_refresh_inactive">Push to Refresh</string>
+    <string name="main_action_refresh_active">Refresh Active</string>
+    <string name="main_action_refresh_cont">Continuous Refresh</string>
+    <string name="main_action_tofullscreen">Enter Fullscreen</string>
+    <string name="main_action_fromfullscreen">Return from Fullscreen</string>
+    
+    <string name="main_select_currency">Select currency:</string>
+    <string name="main_select_exchange">Select exchange:</string>
+    
+    <string name="main_fixerio_props">Calculated using Fixer.io:</string>
+    <string name="main_marketCap">Market Capitalization:</string>
+    <string name="main_price">Price:</string>
+    <string name="main_btc_price">Bitcoin price:</string>
+    <string name="main_volume_exchanges">24 hour volume:</string>
+    
+    <string name="main_coinmarketcap_props">Coinmarketcap.com:</string>
+    <string name="main_long_change">7 hour change:</string>
+    <string name="main_ranking">Ranking based on capitalization:</string>
+    
+    <string name="main_exchange_props">Exchange data:</string>
+    <string name="main_last_price">Latest price:</string>
+    <string name="main_exchange_change">Recent change:</string>
+    <string name="main_exchange_volume">24 hour volume:</string>
+    
+    <string name="main_block_explorer_props">Block Explorer Data:</string>
+    <string name="main_difficulty">Difficulty:</string>
+    <string name="main_hashrate">Hashrate:</string>
+    <string name="main_total_coins">Total coins:</string>
+    <string name="main_height">Block height:</string>
+    <string name="main_reward">Last reward:</string>
+    
+    
+    <!-- info fragment strings -->
+    <string name="calc_select_currency">Select currency:</string>
+    <string name="calc_select_exchange">Select exchange:</string>
+    
+    <string name="calc_calculators">Calculators:</string>
+    <string name="calc_note">Note: entered values shared with 2x2 widgets, persistent</string>
+
+    <string name="calc_user_xmr_prompt">Enter your XMR:</string>
+    <string name="calc_user_xmr_price">Price of your XMR:</string>
+
+    <string name="calc_user_btc_prompt">Enter your BTC:</string>
+    <string name="calc_user_btc_price">Price of your BTC:</string>
+    <string name="calc_user_xmr_btc_price">Price of your XMR+BTC:</string>
+    
+    <string name="calc_user_hashrate_prompt">Enter your hashrate:</string>
+    <string name="calc_user_mine_projection">Projected XMR/day (10% orphan):</string>
+    <string name="calc_user_mine_value_projection">Projected XMR value/day:</string>
+    
+    
+    <!-- graph fragment strings -->
+    <string name="graph_prompt_select">Select exchanges to graph:</string>
+    <string name="graph_total">Combined</string>
+    
+    <!-- market fragment strings -->    
+    <string name="market_select_currency">Select currency:</string>
+    <string name="market_select_exchange">Select exchange:</string>
+    <string name="market_select_coin">Select coin:</string>
+    
+    <string name="market_exchange_props">Exchange data:</string>
+    <string name="market_last_price">Latest price:</string>
+    <string name="market_exchange_change">Recent change:</string>
+    <string name="market_exchange_volume">24 hour volume:</string>
+    <string name="market_exchange_total_volume">24 hour all XMR markets volume:</string>
+    
+        
+    <!-- alarm fragment strings -->
+    <string name="alarm_select_exchange">Select Exchange for Alerts:</string>
+    <string name="alarm_set_prompt">Push Notification Alerts:</string>
+    <string name="alarm_lower_prompt">Alert for prices (in BTC) lower than this:</string>
+    <string name="alarm_higher_prompt">Alert for prices (in BTC) higher than this:</string>
+    <string name="alarm_on">On</string>    
+    <string name="alarm_off">Off</string>
+    <string name="alarm_no_play_services">Google Play Services required for GCM.</string>
+    <string name="alarm_no_internet">Cannot connect to gcm.googleapis.com.</string>
+    <string name="alarm_registration_failed">Push Registration failed. Please try again.</string>
+    <string name="alarm_unregistration_failed">Push Unregistration failed. Please try again.</string>
+    <string name="alarm_notification_title">Monero Alert</string>
+    <string name="alarm_notification_message">Monero at $$$ on %%%.</string>
+    <string name="alarm_disable_alerts">Disable Alerts</string>
+
+    <!-- general purpose strings -->
+    
+    <string-array name="exchanges">
+        <item>Poloniex.com</item>
+        <item>Bittrex.com</item>
+        <item>Bter.com</item>
+        <item>Hitbtc.com</item>
+        <!-- <item>Melotic.com</item>-->
+        <item>Shapeshift.io</item>
+        <!-- <item>Cryptsy.com</item>-->
+        <item>Cryptopia.co.nz</item>
+        <item>Bitfinex.com</item>
+    </string-array>
+
+    <string-array name="explorers">
+        <item>ChainRadar.com</item>
+        <item>MoneroBlocks.info</item>
+        <!-- <item>MoneroChain.info</item>-->
+    </string-array>
+    
+    <string-array name="coinmarketcap_currencies">
+        <item>US Dollars</item>
+        <item>EU Euros</item>
+        <item>Chinese Yuan</item>
+        <item>UK Pounds</item>
+        <item>Canadian Dollars</item>
+        <item>Russian Rubles</item>
+        <item>Hong Kong Dollars</item>
+    </string-array>
+    
+      <string-array name="bitcoinaverage_currencies">
+        <item>Australian Dollars</item>
+        <item>Brazilian Reals</item>
+        <item>Canadian Dollars</item>
+        <item>Swiss Franks</item>
+        <item>Chinese Yuan</item>
+        <item>EU Euros</item>
+        <item>UK Pounds</item>
+        <item>Indonesian Rupiah</item>
+        <item>Israeli Sheqalim</item>
+        <item>Indian Rupees</item>
+        <item>Japanese Yen</item>
+        <item>South Korean Won</item>
+        <item>Mexican Pesos</item>
+        <item>Malaysian Ringgit</item>
+        <item>Nigerian Naira</item>
+        <item>New Zealand Dollars</item>
+        <item>Polish Złoty</item>
+        <item>Russian Rubles</item>
+        <item>Swedish Kronor</item>
+        <item>Singapore Dollars</item>
+        <item>Turkish Lira</item>
+        <item>US Dollars</item>
+        <item>South African Rand</item>
+    </string-array>
+    
+    <string name="aud_symbol">A$</string>
+    <string name="brl_symbol">R$</string>
+    <string name="cad_symbol">C$</string>
+    <string name="chf_symbol">Fr</string>
+    <string name="cny_symbol">¥</string>
+    <string name="eur_symbol">€</string>
+    <string name="gbp_symbol">£</string>
+    <string name="hkd_symbol">HK$</string>
+    <string name="idr_symbol">Rp</string>
+    <string name="ils_symbol">₪</string>
+    <string name="inr_symbol">₹</string>
+    <string name="jpy_symbol">¥</string>
+    <string name="krw_symbol">₩</string>
+    <string name="mxn_symbol">$</string>
+    <string name="myr_symbol">RM</string>
+    <string name="nok_symbol">kr</string>
+    <string name="ngn_symbol">₦</string>
+    <string name="nzd_symbol">NZ$</string>
+    <string name="pln_symbol">zł</string>
+    <string name="ron_symbol">lei</string>
+    <string name="rub_symbol">р</string>
+    <string name="sek_symbol">kr</string>
+    <string name="sgd_symbol">S$</string>
+    <string name="try_symbol">&#8378;</string>
+    <string name="usd_symbol">$</string>
+    <string name="zar_symbol">R</string>
+    
+    <string name="btc_symbol">BTC</string>
+    <string name="xmr_symbol">XMR</string>
+    <string name="megahash_per_second_symbol">Mh/s</string>
+    
+    <string name="null_string"></string>
+</resources>

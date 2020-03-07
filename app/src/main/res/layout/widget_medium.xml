@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/widget_bg2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="2pt"
+	    android:layout_marginRight="2pt"
+	    android:layout_marginTop="1pt"
+        android:layout_weight="1" >
+        
+	    <TextView
+	        android:id="@+id/widget_text_exchange"
+	        style="@style/textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1" />
+
+        <TextView
+            android:id="@+id/widget_text_time"
+            style="@style/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+    		android:textColor="#EEEEEE" />
+
+         <ImageView
+            android:id="@+id/monero_logo_imageView"
+            android:layout_width="30dip"
+            android:layout_height="18dp"
+	    	android:gravity="right"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:src="@drawable/monero_circle" /> 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="2pt"
+    	android:layout_marginRight="2pt"
+        android:layout_weight="1" >
+         
+	    <TextView
+	        style="@style/textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1"
+	        android:text="@string/widget_price" />
+	
+	    <TextView
+	        android:id="@+id/widget_text_price_btc"
+	        style="@style/textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1" />
+
+	    <ImageView
+	        android:id="@+id/widget_price_btc_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="12dip"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false" />
+	    
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="@string/null_string"
+	        android:layout_weight="1" />
+        
+        <ImageView
+	        android:id="@+id/widget_btc_price_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="12dip"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false" /> 
+            
+	    <TextView
+	        android:id="@+id/widget_text_btc_price"
+	        style="@style/textview"
+	    	android:gravity="right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1" />
+
+    </LinearLayout>
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+		android:layout_marginLeft="2pt"
+		android:layout_marginRight="2pt"
+        android:layout_weight="1" >
+	    
+	    <TextView
+	        style="@style/textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1"
+	    	android:text="@string/widget_price" />
+	    
+	    <TextView
+	        android:id="@+id/widget_text_price_currency"
+	    	style="@style/textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" />
+
+	    <TextView
+	        android:id="@+id/widget_hashrate"
+	    	style="@style/textview"
+	    	android:gravity="right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+		android:layout_marginLeft="2pt"
+		android:layout_marginRight="2pt"
+        android:layout_weight="1" >
+	    
+	    <TextView
+	        style="@style/textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1"
+	    	android:text="@string/widget_volume" />
+	
+	    <TextView
+	        android:id="@+id/widget_text_volume"
+	    	style="@style/textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1" />
+	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="@string/null_string"
+	        android:layout_weight="1" />
+	            
+        <ImageView
+            android:id="@+id/refesh_imageView"
+            android:layout_width="30dp"
+            android:layout_height="18dp"
+	    	android:gravity="right"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:src="@drawable/refresh_inactive" /> 
+
+    </LinearLayout>
+    
+	
+
+
+     
+    
+
+
+</LinearLayout>

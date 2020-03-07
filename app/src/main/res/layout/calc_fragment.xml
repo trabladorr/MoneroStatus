@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_fragment"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+        
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	    
+	    <Space android:id="@+id/calc_dummy" 
+	        android:layout_width="0dp" 
+	        android:layout_height="0dp"
+	        android:layout_centerHorizontal="true" 
+	        android:visibility="invisible"/>
+	
+	    <TextView
+	        android:id="@+id/calc_text_select_currency"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_alignBottom="@+id/calc_select_currency_spinner"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_toLeftOf="@+id/calc_select_currency_spinner"
+	        android:text="@string/calc_select_currency" />
+	    
+	    <Spinner
+	       	android:id="@+id/calc_select_currency_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/calc_dummy"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	       	android:prompt="@string/calc_select_currency" />
+	
+	    <TextView
+	        android:id="@+id/calc_text_select_exchange"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_alignBottom="@+id/calc_select_exchange_spinner"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignRight="@+id/calc_text_select_currency"
+	        android:layout_below="@+id/calc_select_currency_spinner"
+	        android:text="@string/calc_select_exchange" />
+	
+	    <Spinner
+	        android:id="@+id/calc_select_exchange_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/calc_dummy"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_select_currency_spinner"
+	        android:prompt="@string/calc_select_exchange" />
+
+	    <TextView
+	        android:id="@+id/calc_spacer1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_select_exchange_spinner"
+	        android:text="@string/null_string" />
+	    
+	    
+	    <TextView
+	        android:id="@+id/calc_fixed_text_calculators"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_spacer1"
+	        android:gravity="center_horizontal"
+	        android:text="@string/calc_calculators"
+	        android:textStyle="bold" />
+	    
+	    <TextView
+	        android:id="@+id/calc_fixed_text_note"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_fixed_text_calculators"
+	        android:gravity="center_horizontal"
+	        android:text="@string/calc_note"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/calc_fixed_text_user_coins"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/calc_user_coins"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/calc_fixed_text_note"
+	        android:layout_toLeftOf="@+id/calc_user_coins"
+	        android:text="@string/calc_user_xmr_prompt" />
+
+	    <EditText
+	        android:id="@+id/calc_user_coins"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/calc_dummy"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_fixed_text_note"
+	        android:ems="10"
+	        android:gravity="right"
+	        android:inputType="numberDecimal" />
+	    
+	    <TextView
+		    android:id="@+id/calc_fixed_text_user_price_btc"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/calc_fixed_text_user_coins"
+		    android:text="@string/calc_user_xmr_price" />
+
+	    <TextView
+	        android:id="@+id/calc_text_user_price_btc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_user_coins"
+	        android:layout_toRightOf="@+id/calc_fixed_text_user_price_btc"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/calc_fixed_text_user_price_currency"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/calc_fixed_text_user_price_btc"
+		    android:text="@string/calc_user_xmr_price" />
+
+	    <TextView
+	        android:id="@+id/calc_text_user_price_currency"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_text_user_price_btc"
+	        android:layout_toRightOf="@+id/calc_fixed_text_user_price_currency"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/calc_spacer2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_fixed_text_user_price_currency"
+	        android:text="@string/null_string" />
+
+		<TextView
+			android:id="@+id/calc_fixed_text_user_btc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/calc_user_btc"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/calc_spacer2"
+			android:layout_toLeftOf="@+id/calc_user_btc"
+			android:text="@string/calc_user_btc_prompt" />
+
+		<EditText
+			android:id="@+id/calc_user_btc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/calc_dummy"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/calc_spacer2"
+			android:ems="10"
+			android:gravity="right"
+			android:inputType="numberDecimal" />
+
+		<TextView
+			android:id="@+id/calc_fixed_text_user_btc_price_currency"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/calc_fixed_text_user_btc"
+			android:text="@string/calc_user_btc_price" />
+
+		<TextView
+			android:id="@+id/calc_text_user_btc_price_currency"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/calc_fixed_text_user_btc"
+			android:layout_toRightOf="@+id/calc_fixed_text_user_btc_price_currency"
+			android:gravity="right"
+			android:text="@string/null_string" />
+
+		<TextView
+			android:id="@+id/calc_fixed_text_user_total_price_currency"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/calc_fixed_text_user_btc_price_currency"
+			android:text="@string/calc_user_xmr_btc_price" />
+
+		<TextView
+			android:id="@+id/calc_text_user_total_price_currency"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/calc_text_user_btc_price_currency"
+			android:layout_toRightOf="@+id/calc_fixed_text_user_total_price_currency"
+			android:gravity="right"
+			android:text="@string/null_string" />
+
+		<TextView
+			android:id="@+id/calc_spacer3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/calc_fixed_text_user_total_price_currency"
+			android:text="@string/null_string" />
+
+	    <TextView
+	        android:id="@+id/calc_fixed_text_user_hashrate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/calc_user_hashrate"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/calc_spacer3"
+	        android:layout_toLeftOf="@+id/calc_user_hashrate"
+	        android:text="@string/calc_user_hashrate_prompt" />
+
+	    <EditText
+	        android:id="@+id/calc_user_hashrate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/calc_dummy"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_spacer3"
+	        android:ems="10"
+	        android:gravity="right"
+	        android:inputType="numberDecimal" />
+	    
+	    <TextView
+		    android:id="@+id/calc_fixed_text_user_mine_projection"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/calc_fixed_text_user_hashrate"
+		    android:text="@string/calc_user_mine_projection" />
+
+	    <TextView
+	        android:id="@+id/calc_text_user_mine_projection"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/calc_user_hashrate"
+	        android:layout_toRightOf="@+id/calc_fixed_text_user_mine_projection"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/calc_fixed_text_user_mine_value_projection"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+	        android:layout_alignParentBottom="true"
+		    android:layout_below="@+id/calc_fixed_text_user_mine_projection"
+		    android:text="@string/calc_user_mine_value_projection" />
+
+	    <TextView
+	        android:id="@+id/calc_text_user_mine_value_projection"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_below="@+id/calc_text_user_mine_projection"
+	        android:layout_toRightOf="@+id/calc_fixed_text_user_mine_value_projection"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+
+	</RelativeLayout>
+    	
+
+</ScrollView>

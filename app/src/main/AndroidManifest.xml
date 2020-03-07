@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tr.monerostatus"
+    android:versionCode="54"
+    android:versionName="1.3.6" >
+
+    <!-- Normal internet access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- gcm permissions -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="tr.monerostatus.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- notification permission -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--
+        <meta-data
+	        android:name="com.google.android.gms.version" />
+	          android:value="@integer/google_play_services_version" /> 
+        -->
+
+
+        <!-- main activity -->
+        <activity
+            android:name=".app.MainActivity"
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- widget configuration activities -->
+        <activity android:name=".widget.WidgetConfigMedium" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".widget.WidgetConfigLarge" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- widget receivers and services -->
+        <receiver
+            android:name=".widget.CoinWidgetMedium"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="tr.monerostatus.widget.MONERO_APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/coin_widget_provider_medium" />
+        </receiver>
+        <receiver
+            android:name=".widget.CoinWidgetLarge"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="tr.monerostatus.widget.MONERO_APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/coin_widget_provider_large" />
+        </receiver>
+
+        <service android:name=".widget.WidgetUpdaterMedium" />
+        <service android:name=".widget.WidgetUpdaterLarge" />
+
+        <!-- gcm receiver and service -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="tr.monerostatus" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".experimental.GcmHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".experimental.InstanceIDService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".experimental.GcmIntentService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="tr.monerostatus.alert.DISABLE_ALERTS" />
+                <action android:name="tr.monerostatus.alert.REFRESH_ALERTS" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

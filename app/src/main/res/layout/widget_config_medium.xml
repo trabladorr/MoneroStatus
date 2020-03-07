@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <Space android:id="@+id/config_dummy" 
+        android:layout_width="0dp" 
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" 
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/config_text_select_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/config_select_currency_spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/config_select_currency_spinner"
+        android:text="@string/config_select_currency" />
+    
+    <Spinner
+        android:id="@+id/config_select_currency_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/config_dummy"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:prompt="@string/config_select_currency" />
+
+    <TextView
+        android:id="@+id/config_text_select_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/config_text_select_currency"
+        android:layout_below="@+id/config_select_currency_spinner"
+        android:text="@string/config_select_exchange" />
+
+    <Spinner
+        android:id="@+id/config_select_exchange_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/config_text_select_currency"
+        android:layout_toRightOf="@+id/config_text_select_currency"
+        android:prompt="@string/config_select_exchange" />
+    
+    <Button
+        android:id="@+id/config_btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:text="@string/config_ok_button" />
+
+</RelativeLayout>

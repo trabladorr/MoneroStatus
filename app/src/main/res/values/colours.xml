@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="widget_change_negative_high">#ff0000</color>
+	<color name="widget_change_negative_medium">#ff6666</color>
+	<color name="widget_change_negative_low">#ffbbbb</color>
+	<color name="widget_change_none">#ffffff</color>
+	<color name="widget_change_positive_low">#bbffbb</color>
+	<color name="widget_change_positive_medium">#77ff77</color>
+	<color name="widget_change_positive_high">#00ff00</color>  
+    
+    <item name="change_negative_high_boundary" format="float" type="dimen">-0.1</item>
+    <item name="change_negative_medium_boundary" format="float" type="dimen">-0.05</item>
+    <item name="change_negative_low_boundary" format="float" type="dimen">-0.01</item>
+    <item name="change_positive_low_boundary" format="float" type="dimen">0.01</item>
+    <item name="change_positive_medium_boundary" format="float" type="dimen">0.05</item>
+    <item name="change_positive_high_boundary" format="float" type="dimen">0.1</item>
+    
+    <color name="graph_colour_poloniex">#e1e1e6</color>  
+    <color name="graph_colour_bittrex">#226b8a</color>  
+    <color name="graph_colour_bter">#ff9e17</color>  
+    <color name="graph_colour_mintpal">#008b5d</color>
+    <color name="graph_colour_hitbtc">#43acd9</color>
+    <color name="graph_colour_melotic">#aaf0e3</color>
+    <color name="graph_colour_cryptopia">#aaf0e3</color>
+    <color name="graph_colour_cryptsy">#aaf0e3</color>
+    <color name="graph_colour_bitfinex">#97C554</color>
+    <color name="graph_colour_total">#ff0000</color>
+    <color name="graph_colour_unselected">@android:color/black</color>
+    
+    <color name="listview_pressed">#777777</color>  
+    <color name="listview_selected">#44ffffff</color>  
+    <color name="listview_unselected">#00ffffff</color>
+    
+</resources>    

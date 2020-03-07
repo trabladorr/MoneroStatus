@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_fragment"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+        
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	    
+	    <Space android:id="@+id/main_dummy" 
+	        android:layout_width="0dp" 
+	        android:layout_height="0dp"
+	        android:layout_centerHorizontal="true" 
+	        android:visibility="invisible"/>
+	
+	    <TextView
+	        android:id="@+id/main_text_select_currency"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_alignBottom="@+id/main_select_currency_spinner"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_toLeftOf="@+id/main_select_currency_spinner"
+	        android:text="@string/main_select_currency" />
+	    
+	    <Spinner
+	       	android:id="@+id/main_select_currency_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/main_dummy"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	       	android:prompt="@string/main_select_currency" />
+	
+	    <TextView
+	        android:id="@+id/main_text_select_exchange"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_alignBottom="@+id/main_select_exchange_spinner"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignRight="@+id/main_text_select_currency"
+	        android:layout_below="@+id/main_select_currency_spinner"
+	        android:text="@string/main_select_exchange" />
+	
+	    <Spinner
+	        android:id="@+id/main_select_exchange_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/main_dummy"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_select_currency_spinner"
+	        android:prompt="@string/main_select_exchange" />
+
+	    <TextView
+	        android:id="@+id/main_spacer1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_select_exchange_spinner"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/main_fixed_text_bitcoinaverage_props"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_spacer1"
+	        android:gravity="center_horizontal"
+	        android:text="@string/main_fixerio_props"
+	        android:textStyle="bold" />
+
+		<TextView
+		    android:id="@+id/main_fixed_text_marketcap"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_bitcoinaverage_props"
+		    android:text="@string/main_marketCap" />
+
+	    <TextView
+	        android:id="@+id/main_text_marketcap"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_fixed_text_bitcoinaverage_props"
+	        android:layout_toRightOf="@+id/main_fixed_text_marketcap"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_price_currency"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_marketcap"
+		    android:text="@string/main_price" />
+
+	    <TextView
+	        android:id="@+id/main_text_price_currency"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_marketcap"
+	        android:layout_toRightOf="@+id/main_fixed_text_price_currency"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+   	    <TextView
+		    android:id="@+id/main_fixed_text_volume_exchanges"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_price_currency"
+		    android:text="@string/main_volume_exchanges" />
+
+	    <TextView
+	        android:id="@+id/main_text_volume_exchanges"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_price_currency"
+	        android:layout_toRightOf="@+id/main_fixed_text_volume_exchanges"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	     
+	    <TextView
+		    android:id="@+id/main_fixed_text_btc_price_currency"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_volume_exchanges"
+		    android:text="@string/main_btc_price" />
+
+	    <TextView
+	        android:id="@+id/main_text_btc_price_currency"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_volume_exchanges"
+	        android:layout_toRightOf="@+id/main_fixed_text_btc_price_currency"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/main_spacer2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_fixed_text_btc_price_currency"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/main_fixed_text_coinmarketcap_props"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_spacer2"
+	        android:gravity="center_horizontal"
+	        android:text="@string/main_coinmarketcap_props"
+	        android:textStyle="bold" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_change"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_coinmarketcap_props"
+		    android:text="@string/main_long_change" />
+
+	    <TextView
+	        android:id="@+id/main_text_change"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_fixed_text_coinmarketcap_props"
+	        android:layout_toRightOf="@+id/main_fixed_text_change"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_position"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_change"
+		    android:text="@string/main_ranking" />
+
+	    <TextView
+	        android:id="@+id/main_text_position"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_change"
+	        android:layout_toRightOf="@+id/main_fixed_text_position"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/main_spacer3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_fixed_text_position"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/main_text_exchange"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_spacer3"
+	        android:gravity="center_horizontal"
+	        android:text="@string/main_exchange_props"
+	        android:textStyle="bold" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_price_btc"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_text_exchange"
+		    android:text="@string/main_last_price" />
+
+	    <TextView
+	        android:id="@+id/main_text_price_btc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_exchange"
+	        android:layout_toRightOf="@+id/main_fixed_text_price_btc"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_exchange_change"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_price_btc"
+		    android:text="@string/main_exchange_change" />
+
+	    <TextView
+	        android:id="@+id/main_text_exchange_change"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_price_btc"
+	        android:layout_toRightOf="@+id/main_fixed_text_exchange_change"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_exchange_volume"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_exchange_change"
+		    android:text="@string/main_exchange_volume" />
+
+	    <TextView
+	        android:id="@+id/main_text_exchange_volume"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_exchange_change"
+	        android:layout_toRightOf="@+id/main_fixed_text_exchange_volume"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/main_spacer4"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_fixed_text_exchange_volume"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+	        android:id="@+id/main_text_block_explorer_props"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_spacer4"
+	        android:gravity="center_horizontal"
+	        android:text="@string/main_block_explorer_props"
+	        android:textStyle="bold" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_difficulty"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_text_block_explorer_props"
+		    android:text="@string/main_difficulty" />
+
+	    <TextView
+	        android:id="@+id/main_text_difficulty"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_block_explorer_props"
+	        android:layout_toRightOf="@+id/main_fixed_text_difficulty"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_hashrate"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_difficulty"
+		    android:text="@string/main_hashrate" />
+
+	    <TextView
+	        android:id="@+id/main_text_hashrate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_difficulty"
+	        android:layout_toRightOf="@+id/main_fixed_text_hashrate"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_total"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_hashrate"
+		    android:text="@string/main_total_coins" />
+
+	    <TextView
+	        android:id="@+id/main_text_total"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_hashrate"
+	        android:layout_toRightOf="@+id/main_fixed_text_total"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	    <TextView
+		    android:id="@+id/main_fixed_text_height"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/main_fixed_text_total"
+		    android:text="@string/main_height" />
+
+	    <TextView
+	        android:id="@+id/main_text_height"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/main_text_total"
+	        android:layout_toRightOf="@+id/main_fixed_text_height"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+	    
+	   	<TextView
+		    android:id="@+id/main_fixed_text_reward"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+	        android:layout_alignParentBottom="true"
+		    android:layout_below="@+id/main_fixed_text_height"
+		    android:text="@string/main_reward" />
+
+	    <TextView
+	        android:id="@+id/main_text_reward"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_below="@+id/main_text_height"
+	        android:layout_toRightOf="@+id/main_fixed_text_reward"
+	        android:gravity="right"
+	        android:text="@string/null_string" />
+
+	</RelativeLayout>
+    	
+
+</ScrollView>
